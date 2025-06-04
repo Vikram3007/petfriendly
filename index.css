@@ -1,0 +1,218 @@
+/* Pet-Friendly City Campaign - Homepage Code */
+
+body {
+  margin: 0;
+  font-family: 'Baloo 2', cursive;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+.navbar {
+  background-color: #ff6f61;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffe0d3;
+}
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1583337130417-3346a1c67b69?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  padding: 0 1rem;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-buttons .btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  background-color: #ffb347;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-buttons .btn.secondary {
+  background-color: #ff6f61;
+}
+
+.cta-buttons .btn:hover {
+  transform: scale(1.1);
+}
+
+.volunteer-form {
+  background-color: #fff0e1;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.volunteer-form h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.volunteer-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.volunteer-form input, 
+.volunteer-form select {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.volunteer-form button {
+  padding: 0.8rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.volunteer-form button:hover {
+  background-color: #e65c50;
+}
+
+.volunteer-form button:focus {
+  outline: 2px solid #ffb347;
+  outline-offset: 2px;
+}
+
+.impact-stories {
+  padding: 3rem 2rem;
+  background-color: #ffe7d1;
+  text-align: center;
+}
+
+.impact-stories h2 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.stories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.story {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.story img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  object-fit: cover;
+  height: 150px;
+}
+
+.story p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer {
+  background-color: #ff6f61;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .cta-buttons .btn {
+    padding: 0.6rem 1rem;
+  }
+  .stories {
+    flex-direction: column;
+  }
+}
+
+/* Optional smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
